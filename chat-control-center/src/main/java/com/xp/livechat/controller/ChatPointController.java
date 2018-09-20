@@ -18,6 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.xp.livechat.entity.ChatPoint;
 import com.xp.livechat.service.IChatPointService;
 
+
 @Controller
 @RequestMapping("rest/livechat")
 public class ChatPointController {
