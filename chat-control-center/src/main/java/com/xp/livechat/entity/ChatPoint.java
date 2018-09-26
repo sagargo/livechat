@@ -10,6 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -33,14 +35,13 @@ public class ChatPoint extends AuditModel implements Serializable {
 	@Column(name="chat_point_name")
     private String chatPointName;
 	
-	
 	  @ManyToMany(fetch = FetchType.LAZY,
-	            cascade = {
-	                CascadeType.PERSIST,
-	                CascadeType.MERGE
-	            },
-	  mappedBy = "chatPoints")
-	    private Set<Agent> agents = new HashSet<>();
+      cascade = {
+          CascadeType.PERSIST,
+          CascadeType.MERGE
+      },
+      	mappedBy = "chatPoints")
+	  private Set<Agent> agents = new HashSet<>();
 	
 	public long getChatPointId() {
 		return chatPointId;
