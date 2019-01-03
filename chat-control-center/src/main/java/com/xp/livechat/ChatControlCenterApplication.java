@@ -62,11 +62,5 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 		ag3.getChatPoints().add(cp2);
 		
 		chatPointRepository.save(cp2);
-		
-		
-		
-		
-		
-		
 	}       
 }            
