@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ec2-user/server
+
+hooks:
+  ApplicationStart:
+    - location: server_start.sh
+      runas: ec2-user
