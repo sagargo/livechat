@@ -8,5 +8,4 @@ files:
 hooks:
   ApplicationStart:
     - location: server_start.sh
-      timeout: 500000
       runas: ec2-user
