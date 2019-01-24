@@ -27,7 +27,6 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		
 		ChatPoint cp1=new ChatPoint();
 		cp1.setChatPointName("cp1");
 		
