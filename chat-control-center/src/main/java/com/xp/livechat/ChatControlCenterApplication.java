@@ -32,14 +32,14 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 		cp1.setChatPointName("cp1");
 		
 		Agent ag1=new Agent();
-		ag1.setAgentName("sagar");
-		ag1.setUserName("sagarmali24");
-		ag1.setPassword("sagar1987");
+		ag1.setAgentName("Agent1");
+		ag1.setUserName("a1user");
+		ag1.setPassword("a1pass");
 		
 		Agent ag2=new Agent();
-		ag2.setAgentName("sagar2");
-		ag2.setUserName("sagarmali242");
-		ag2.setPassword("sagar19872");
+		ag2.setAgentName("Agent2");
+		ag2.setUserName("a2user");
+		ag2.setPassword("a2pass");
 		
 		cp1.getAgents().add(ag1);
 		cp1.getAgents().add(ag2);
@@ -53,9 +53,9 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 		cp2.setChatPointName("cp2");
 		
 		Agent ag3=new Agent();
-		ag3.setAgentName("sagar3");
-		ag3.setUserName("sagarmali243");
-		ag3.setPassword("sagar19873");
+		ag3.setAgentName("Agent3");
+		ag3.setUserName("a3user");
+		ag3.setPassword("a3pass");
 		
 		cp2.getAgents().add(ag3);
 		
@@ -64,16 +64,16 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 		chatPointRepository.save(cp2);
 		
 		Agent ag4=new Agent();
-		ag4.setAgentName("agent4");
-		ag4.setUserName("fdsfsd");
-		ag4.setPassword("fdsfd");
+		ag4.setAgentName("Agent4");
+		ag4.setUserName("a4user");
+		ag4.setPassword("a4pass");
 		
 		agentRespository.save(ag4);
 		
 		Agent ag5=new Agent();
-		ag5.setAgentName("agent5");
-		ag5.setUserName("fdsfsd");
-		ag5.setPassword("fdsfd");
+		ag5.setAgentName("Agent5");
+		ag5.setUserName("a5user");
+		ag5.setPassword("a5pass");
 		
 		agentRespository.save(ag5);
 		
