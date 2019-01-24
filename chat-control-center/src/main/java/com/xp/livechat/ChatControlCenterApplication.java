@@ -62,5 +62,13 @@ public class ChatControlCenterApplication implements CommandLineRunner{
 		ag3.getChatPoints().add(cp2);
 		
 		chatPointRepository.save(cp2);
+		
+		Agent ag4=new Agent();
+		ag4.setAgentName("agent4");
+		ag4.setUserName("fdsfsd");
+		ag4.setPassword("fdsfd");
+		
+		agentRespository.save(ag4);
+		
 	}       
 }            

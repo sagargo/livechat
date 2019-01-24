@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xp.livechat.audit.AuditModel;
 
 @Entity
@@ -44,8 +45,11 @@ public class Agent  extends AuditModel implements Serializable {
 	@Size(max = 100)
 	@Column(name="password")
     private String password;
+	public Agent() {
+		// TODO Auto-generated constructor stub
+	}
 	
-
+	
 	  @ManyToMany(fetch = FetchType.LAZY,
 	            cascade = {
 	                CascadeType.PERSIST,
@@ -54,7 +58,8 @@ public class Agent  extends AuditModel implements Serializable {
 	    @JoinTable(name = "agent_chatpoint_mapping",
 	            joinColumns = { @JoinColumn(name = "agent_id") },
 	            inverseJoinColumns = { @JoinColumn(name = "chat_point_id") })
-	    private Set<ChatPoint> chatPoints = new HashSet<>();
+	  @JsonIgnore  
+	  private Set<ChatPoint> chatPoints = new HashSet<>();
 	
 	public long getAgentId() {
 		return agentId;
